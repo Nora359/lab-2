@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Results Table</title>
+    <style>
+   
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f7f6; 
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-color: #050505;
+        width: 450px;
+        background-color: white;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);   
+        overflow: hidden; 
+      }
+
+      caption {
+        font-size: 24px;
+        font-weight: bold;
+        color: #da1657;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    td {
+color: #7002b9;
+font-weight: bold;
+}
+      th,
+      td {
+        font-weight: bold;
+        border: 1px solid #000000;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .header-row {
+        background-color: #af0994;
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      tr:hover {
+        background-color: #e473b9;
+        transition: 0.3s;
+      }
+
+      .student-name {
+        font-weight: 600;
+        color: #2c3e50;
+        background-color: #fafafa;
+      }
+      .btn-next {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #da1657; 
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: transform 0.2s, background-color 0.2s;
+        box-shadow: 0 4px 15px rgba(218, 22, 87, 0.3);
+    }
+
+    .btn-next:hover {
+        background-color: #af0994; 
+        transform: translateY(-3px);
+    }
+
+   
+    body {
+        flex-direction: column;
+    }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Student Result
+      </caption>
+
+      <tr class="header-row">
+        <th>Student Name</th>
+        <th>Course Name</th>
+        <th>Degree</th>
+      </tr>
+
+      <tr>
+        <td rowspan="2" class="student-name">Ahmed</td>
+        <td>HTML</td>
+        <td class="degree-cell">80</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td class="degree-cell">90</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2" class="student-name">Mohamed</td>
+        <td>C#</td>
+        <td class="degree-cell">80</td>
+      </tr>
+      <tr>
+        <td>C++</td>
+        <td class="degree-cell">70</td>
+      </tr>
+    </table>
+    <div style="text-align: center; margin-top: 30px;">
+    <a href="assignment 2.html" class="btn-next">Assignment 2</a>
+</div>
+  </body>
+</html>

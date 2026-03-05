@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 2 - Video</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f7f6;
+        font-family: sans-serif;
+      }
+
+      h1 {
+        color: #da1657;
+        margin-bottom: 20px;
+      }
+
+      .video-wrapper {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        overflow: hidden;
+        border: 5px solid white;
+      }
+
+      .back-link {
+        margin-top: 20px;
+        color: #7002b9;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .btn-next {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #da1657;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: transform 0.2s, background-color 0.2s;
+        box-shadow: 0 4px 15px rgba(218, 22, 87, 0.3);
+      }
+
+      .btn-next:hover {
+        background-color: #af0994;
+        transform: translateY(-3px);
+      }
+
+      body {
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <h1> YouTube Player</h1>
+
+    <div class="video-wrapper">
+      <div class="video-wrapper">
+        <!-- <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/2BggFNfXPGg" 
+        title="YouTube video player" 
+        style="border:none;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe> -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/2BggFNfXPGg?si=s2X7pC9CmtHeBfIE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px">
+      <a href="Assignment 3.html" class="btn-next">Assignment 3</a>
+    </div>
+  </body>
+</html>

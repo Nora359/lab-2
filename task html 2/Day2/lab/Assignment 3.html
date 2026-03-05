@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Page - Assignment 3</title>
+    <style>
+      body {
+        background-color: #f4f7f6;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+        margin: 0;
+      }
+      .form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+      }
+      h2 {
+        color: #da1657;
+        text-align: center;
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      fieldset {
+        border: 1px solid #7002b9;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 15px;
+      }
+
+      legend {
+        font-weight: bold;
+        color: #7002b9;
+        padding: 0 10px;
+      }
+
+      .buttons {
+        text-align: center;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15 heartbreakingpx;
+      }
+
+      .btn-submit {
+        background-color: #da1657;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .btn-reset {
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .btn-submit:hover {
+        background-color: #af0994;
+      }
+
+      .inline-label {
+        display: inline;
+        font-weight: normal;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>User Registration</h2>
+
+      <form action="Thankyou.htm" method="GET">
+        <input type="hidden" name="userID" value="9988" />
+
+        <div class="form-group">
+          <label for="fname">First Name (Required):</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            required
+            tabindex="1"
+            accesskey="f"
+            placeholder="Nora"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="lname">Last Name (Required):</label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            required
+            tabindex="2"
+            accesskey="l"
+            placeholder="Khaled"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            tabindex="3"
+            accesskey="e"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="pass">Password:</label>
+          <input type="password" id="pass" name="pass" required tabindex="4" />
+        </div>
+
+        <div class="form-group">
+          <label for="repass">Repeat Password:</label>
+          <input
+            type="password"
+            id="repass"
+            name="repass"
+            required
+            tabindex="5"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="bdate">Birth Date:</label>
+          <input type="date" id="bdate" name="bdate" tabindex="6" />
+        </div>
+
+        <div class="form-group">
+          <label for="pic">User Picture:</label>
+          <input
+            type="file"
+            id="pic"
+            name="userPic"
+            accept="image/*"
+            tabindex="7"
+          />
+        </div>
+
+        <fieldset>
+          <legend>Gender</legend>
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            tabindex="8"
+          />
+          <label for="male" class="inline-label">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female" class="inline-label">Female</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="faculty">Faculty:</label>
+          <select id="faculty" name="faculty" tabindex="9">
+            <option value="">-- Select Faculty --</option>
+            <option value="cs">Computer Science</option>
+            <option value="eng">Engineering</option>
+            <option value="bus">Business</option>
+          </select>
+        </div>
+
+        <!-- <fieldset>
+          <legend>Interests</legend>
+          <input
+            type="checkbox"
+            id="prog"
+            name="interest"
+            value="programming"
+            tabindex="10"
+          />
+          <label for="prog" class="inline-label">Programming</label>
+          <input type="checkbox" id="read" name="interest" value="reading" />
+          <label for="read" class="inline-label">Reading</label>
+          <input type="checkbox" id="swim" name="interest" value="swimming" />
+          <label for="swim" class="inline-label">Swimming</label>
+        </fieldset> -->
+         <fieldset>
+    <legend>Interests</legend>
+    <input type="checkbox"> Programming
+    <input type="checkbox"> Reading
+    <input type="checkbox"> Swimming
+  </fieldset>
+
+        <div class="form-group">
+          <label for="about">About You:</label>
+          <textarea
+            id="about"
+            name="about"
+            rows="4"
+            tabindex="11"
+            placeholder="Tell us something about yourself..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required
+            tabindex="12"
+          />
+          <label for="terms" class="inline-label">
+            I agree to the
+            <a href="terms.html" target="_blank">Terms and Conditions</a>
+          </label>
+        </div>
+
+        <div class="buttons">
+          <button type="reset" class="btn-reset" tabindex="14">Reset</button>
+          <button type="submit" class="btn-submit" tabindex="13">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
